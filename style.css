@@ -17,11 +17,11 @@ html * {
 @font-face {
   font-family: 'Geared';
   font-weight: bold;
-  src: url(GearedSlab-Bold.ttf);
+  src: url(assets/fonts/geared.ttf);
 }
 @font-face {
   font-family: 'HandShop';
-  src: url(handshop.ttf);
+  src: url(assets/fonts/handshop.ttf);
 }
 
 body {
@@ -48,7 +48,7 @@ nav {
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-size: 12px;
-  background-image: url(masthead.png);
+  background-image: url(assets/img/masthead.png);
   background-size: contain;
   background-position: bottom;
   background-repeat: repeat-x;
