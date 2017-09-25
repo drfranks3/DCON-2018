@@ -28,7 +28,7 @@ $(function() {
 	var date = new Date(2018, 3, 23, 16);
 	var now = new Date();
 	var diff = (date.getTime()/1000) - (now.getTime()/1000);
-	var clock = $('.dcon-countdown').FlipClock(diff, {
+	var clock = $('.countdown').FlipClock(diff, {
 		clockFace: 'DailyCounter',
 		countdown: true
 	});
@@ -50,23 +50,15 @@ $(function() {
 			 // (default click behaviour)
 			 window.location.hash = hash;
 		 });
+	  });
 
-	});
+    // toggle the documents
+    $('#filter span').click(function(){
+      var target = '#' + $(this).text().toLowerCase();
+      $('span.selected').removeClass('selected');
+      $(this).addClass('selected');
+      $('#filter ~ div[id]').not(target).fadeOut('fast');
+      $(target).delay(200).fadeIn('fast');
+    });
 
-	$('.row > div').each(function(){
-		$(this).attr({'data-aos': 'zoom-in', 'data-aos-duration': 800, 'data-aos-delay': 500});
-	});
-
-	AOS.init({
-			easing: 'ease-out-back',
-			duration: 750,
-			once: true
-	});
-
-});
-
-$(window).on('scroll load resize', function(){
-	var y = $('nav').height() * 0.5; // when to make opaque
-	if ($(window).scrollTop() > y) $('nav').addClass('scrolled');
-	else $('nav').removeClass('scrolled');
 });
