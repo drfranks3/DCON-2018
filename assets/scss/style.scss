@@ -6,7 +6,7 @@ Global Variables
 
 $green: #A8BFB0;
 $blue: #8FB1CC;
-$pink: #FF879F;
+$pink: #AB845B;
 $orange: #FFC7B2;
 $beige: #FCFFF1;
 
@@ -33,38 +33,13 @@ html * {
   font-family: 'HandShop';
   src: url(/assets/fonts/handshop.ttf);
 }
-
-.col-xs-5,
-.col-sm-5,
-.col-md-5,
-.col-lg-5 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+@font-face {
+  font-family: 'Ferro';
+  src: url(/assets/fonts/ferrorosso.ttf);
 }
-
-.col-xs-5 {
-    width: 20%;
-    float: left;
-}
-@media (min-width: 768px) {
-.col-sm-5 {
-        width: 20%;
-        float: left;
-    }
-}
-@media (min-width: 992px) {
-    .col-md-5 {
-        width: 20%;
-        float: left;
-    }
-}
-@media (min-width: 1200px) {
-    .col-lg-5 {
-        width: 20%;
-        float: left;
-    }
+@font-face {
+  font-family: 'TrendSlab';
+  src: url(/assets/fonts/trendslab.otf);
 }
 
 body {
@@ -96,7 +71,7 @@ ul {
 nav {
   font-family: 'Montserrat';
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 12px;
   background-image: url(/assets/img/masthead.png);
   background-size: contain;
   background-position: bottom;
@@ -105,6 +80,7 @@ nav {
   padding-top: 20px;
   transition: all 0.3s ease-out;
   letter-spacing: 1.5px;
+  box-shadow: 5px 5px 7px -6px rgba(0, 0, 0, .23);
 
   &.navbar-inverse {
 
@@ -112,7 +88,7 @@ nav {
 
     &.scrolled {
 
-      background-color: rgba(255, 255, 255, .8);
+      background-color: rgba(255, 255, 255, 1);
 
       .navbar-brand:last-child {
         filter: none;
@@ -192,8 +168,18 @@ nav {
 }
 
 ul.nav {
-  margin-top: 15px;
-  margin-right: 20px;
+  margin: 0 auto;
+  text-align: center;
+
+  & > li {
+    display: inline-block !important;
+
+    & > a {
+      padding: 10px;
+    }
+
+  }
+
 }
 
 .center {
@@ -210,13 +196,17 @@ ul.nav {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 2rem;
+  background-color: #333;
+}
 
-  &.pink   { background-color: $pink;   }
-  &.blue   { background-color: $blue;   }
-  &.green  { background-color: $green;  }
-  &.beige  { background-color: $beige;  }
-  &.orange { background-color: $orange; }
+#emblem {
+  float: none;
 
+  img {
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+  }
 }
 
 /* --------------------------------
@@ -226,21 +216,27 @@ section {
   min-height: 635px;
   text-align: center;
   padding-bottom: 25px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 #main {
-  background-color: $green;
+  background-image: url(/assets/img/bg.png);
+  background-color: #94eae5;
+  background-position: center;
+  background-size: cover;
+
   text-transform: uppercase;
+  color: #FFF;
+  text-shadow: 0 0 3px black;
 
   & > div {
     margin-top: 150px;
   }
 
   #dcon-info {
-    padding-top: 50px;
 
     #title {
-      font: 6rem 'Geared';
+      font: 7rem 'Ferro';
+      text-transform: none;
     }
 
     #date {
@@ -248,24 +244,27 @@ section {
       margin: 0 auto;
       letter-spacing: 1.5px;
       color: #FFF;
-      font-size: 2rem;
+      font-size: 1.2rem;
+      padding: 5px;
+      width: 65%;
+      text-shadow: none;
     }
 
   }
 }
 #welcome {
-  background: linear-gradient(0deg, $orange 0%, $green 100%);
+  background: $orange;
 
   #chair-message {
     text-align: left;
     padding-left: 20px;
     font-size: 17px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
   }
 
   #announcements {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     text-align: left;
 
@@ -281,7 +280,7 @@ section {
 }
 
 #documents {
-  background: linear-gradient(0deg, $pink 0%, $orange 100%);
+  background: $pink;
 
   #filter {
     text-transform: uppercase;
@@ -327,8 +326,6 @@ section {
         display: inline-block;
       }
       .downloads {
-        display: inline-block;
-        margin-left: 10px;
 
         a {
           text-transform: uppercase;
@@ -348,7 +345,7 @@ section {
 }
 
 #timeline {
-  background: linear-gradient(0deg, $beige 0%, $pink 100%);
+  background: $beige;
 
   .timeline-container {
       white-space:nowrap;
@@ -361,7 +358,7 @@ section {
     .entry {
         display:inline-block;
         vertical-align:top;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.1);
         padding:10px;
         font-size:12px;
         position:relative;
@@ -414,13 +411,24 @@ section {
 }
 
 #faq {
-  background: linear-gradient(0deg, $blue 0%, $beige 100%);
+  background: $green;
+  color: #FFF;
+
+  .line-decor {
+    background-color: #FFF;
+  }
+
+  & > div:first-child ~ div {
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+  }
 
   #preview {
     text-align: left;
     padding-left: 20px;
     font-size: 17px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -442,7 +450,7 @@ section {
 
 }
 
-#footer {
+#dcon-committee {
   background-color: $blue;
 
   & > div {
@@ -451,7 +459,7 @@ section {
     text-transform: uppercase;
 
     &:first-child {
-      margin-top: 150px;
+      margin-top: 50px;
     }
 
     h1 {
@@ -467,7 +475,8 @@ section {
   }
 
   h4 {
-    margin-bottom: 0
+    margin-bottom: 0;
+    font-size: 14px;
   }
 
   h5 {
@@ -475,4 +484,43 @@ section {
     font-weight: 300;
   }
 
+}
+
+#footer {
+  background-image: url(/assets/img/end.png);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #eaa262;
+}
+
+@media (min-width: 768px) {
+    #emblem {
+      float: right;
+      img {
+        height: initial;
+        width: initial;
+      }
+    }
+    ul.nav {
+      float: right;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+    #main #dcon-info #date {
+      font-size: 2rem;
+    }
+    #documents .downloads {
+      display: inline-block;
+      margin-left: 10px;
+    }
+}
+@media (min-width: 992px) {
+
+
+}
+@media (min-width: 1200px) {
+    #dcon-committee h4 {
+      font-size: 18px;
+    }
 }

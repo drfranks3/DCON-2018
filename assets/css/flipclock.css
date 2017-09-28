@@ -50,7 +50,7 @@
   text-align: center;
   position: relative;
   width: 100%;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 .flip-clock-wrapper:before,
@@ -65,7 +65,6 @@
 /* Skeleton */
 .flip-clock-wrapper ul {
   position: relative;
-  float: left;
   margin: 5px;
   width: 46px;
   height: 65px;
@@ -169,7 +168,7 @@
 .flip-clock-wrapper ul.play li.flip-clock-before {
   z-index: 3; }
 
-.flip-clock-wrapper .flip {   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); }
+.flip-clock-wrapper .flip {   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); display: inline-block; }
 
 .flip-clock-wrapper ul.play li.flip-clock-active {
   -webkit-animation: asd 0.5s 0.5s linear both;
@@ -178,11 +177,11 @@
   z-index: 5; }
 
 .flip-clock-divider {
-  float: left;
   display: inline-block;
   position: relative;
   width: 20px;
-  height: 90px; }
+  height: 90px;
+  vertical-align: bottom; }
 
 .flip-clock-divider:first-child {
   width: 0; }
