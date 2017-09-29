@@ -4,11 +4,19 @@
 Global Variables
 -------------------------------- */
 
+$green: #88AFA7;
+$blue: #8FB1CC;
+$pink: #FDD46C;
+$orange: #FFBAA6;
+$beige: #FCFFF1;
+
+/*
 $green: #A8BFB0;
 $blue: #8FB1CC;
 $pink: #AB845B;
 $orange: #FFC7B2;
 $beige: #FCFFF1;
+*/
 
 /* --------------------------------
 Primary style
@@ -322,6 +330,9 @@ section {
     padding: 1rem;
     margin: 10px 0;
     text-align: left;
+      a {
+        cursor: pointer;
+      }
       h2 {
         display: inline-block;
       }
@@ -336,6 +347,9 @@ section {
 
       }
       p {
+        line-height: 1.5;
+      }
+      p, ul {
         text-align: left;
         margin-left: 0;
         font-size: 1.3rem;
@@ -482,6 +496,7 @@ section {
   h5 {
     margin: 0;
     font-weight: 300;
+    font-size: 13px;
   }
 
 }
@@ -520,7 +535,12 @@ section {
 
 }
 @media (min-width: 1200px) {
-    #dcon-committee h4 {
-      font-size: 18px;
+    #dcon-committee {
+      h4 {
+        font-size: 18px;
+      }
+      h5 {
+        font-size: 15px;
+      }
     }
 }
