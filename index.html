@@ -7,16 +7,16 @@
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="assets/js/flipclock.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/flipclock.min.js" defer></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="100">
 
-<nav class="navbar navbar-inverse navbar-fixed-top scrolled">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dcon-navbar">
@@ -26,9 +26,9 @@
       </button>
       <a class="navbar-brand pull-left" href="http://circlek.org/"><img src="assets/img/wordmark.png" alt="wordmark"/></a>
     </div>
-    <div>
+    <a id="emblem" class="navbar-brand pull-right" href="http://cnhcirclek.org/"><img src="assets/img/emblem.png" alt="emblem"/></a>
+    <div class="pull-right">
       <div id="dcon-navbar" class="collapse navbar-collapse">
-        <a id="emblem" class="navbar-brand" href="http://cnhcirclek.org/"><img src="assets/img/emblem.png" alt="emblem"/></a>
         <ul class="nav navbar-nav">
           <li><a href="#welcome">Home</a></li>
           <li><a href="#documents">Documents</a></li>
@@ -73,12 +73,9 @@
     <div class="line-decor"></div>
     <div id="announcements">
       <div class="entry">
-        <h3>September 30th, 2017</h3>
-        <p>Love the theme reveal? Didn't get to attend Fall Training Conference? Check out the video below!</p>
-      </div>
-      <div class="entry">
-        <h3>September 30th, 2017</h3>
-        <p>Love the theme reveal? Didn't get to attend Fall Training Conference? Check out the video below!</p>
+        <h3>November 6th, 2017</h3>
+        <p>Welcome to the launch of the District Convention 2018 website! The DCON committee has put in a lot of work to make our resources, promotions, applications and more to be available to you right after Fall Training Conference.
+           Stay tuned for more updates as the term progresses, including links for registration, candidate materials, and other useful guides and downloads. Keep it sunny!</p>
       </div>
     </div>
   </div>
@@ -98,9 +95,9 @@
           <i class="material-icons media-object">insert_drive_file</i>
         </div>
         <div class="media-body">
-          <h2>Waiver</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <h2>DCON Waiver</h2>
+          <a href="#">Download</a>
+          <p>All attendees must sign this document to waive liability from Circle K International and other Kiwanis-Family organizations.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -109,8 +106,8 @@
         </div>
         <div class="media-body">
           <h2>Registration</h2>
-          <div class="downloads"><a href="#">Spreadsheet</a></div>
-          <p>Remember to register for District Convention<br/><strong><a href="#">Online Form</a> • <a href="#">Guidebook</a></strong></p>
+          <a href="#">Spreadsheet</a>
+          <p>Details regarding registration will be released soon. Stay tuned for more updates and announcements coming your way!<!--<br/><strong><a href="#">Online Form</a> • <a href="#">Guidebook</a></strong>--></p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -119,8 +116,8 @@
         </div>
         <div class="media-body">
           <h2>Code of Conduct</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Lorem Ipsum dolor sit amet</p>
+          <a href="#">Download</a>
+          <p>This year's Code of Conduct will be an acknowledgement of the DCON Dress Code and similar policies.</p>
         </div>
       </div>
     </div>
@@ -132,7 +129,7 @@
         </div>
         <div class="media-body">
           <h2>Workshops</h2>
-          <div class="downloads"><a href="#">Download</a></div>
+          <a href="#">Download</a>
           <p>Workshops are a wonderful way for you to share your knowledge and experience with members from all over the district, as well as provide you with a chance to showcase your leadership skills.
             There are three opportunities to be involved in workshops for DCON this year: <b>traditional workshop host</b>, <b>panel host</b>, or <b>panel guest</b>.
             If you are interested in becoming a workshop host, please download the following application in its entirety and complete it to the best of your ability.</p>
@@ -151,17 +148,26 @@
         </div>
         <div class="media-body">
           <h2>Talent Show</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Hello everyone! Here you will find the 2018 District Convention Talent Show Application. Details on the theme, scoring rubric, deadlines, and audition videos will be found within the application.
+            The acts will be judged by a panel of judges, and the winners will be announced at the end of District Convention. Please note that this is a friendly competition and that we should all be respectful and support each other.
+            Show the Cal-Nev-Ha District your talents and apply today!</p>
+          <h4><strong>Application Timeline</strong></h4>
+          <ul>
+            <li>Applications will be made available: TBA</li>
+            <li>Applications must be submitted by Saturday, December 23rd @ 10:00PM PST.</li>
+            <li>Talent show performers will be contacted Saturday, December 25th.</li>
+          </ul>
         </div>
       </div>
+      <!--
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="media-left media-middle">
           <i class="material-icons media-object">videocam</i>
         </div>
         <div class="media-body">
           <h2>Media Intern</h2>
-          <div class="downloads"><a href="#">Download</a></div>
+          <a href="#">Download</a>
           <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
         </div>
       </div>
@@ -171,10 +177,21 @@
         </div>
         <div class="media-body">
           <h2>Program Ads</h2>
-          <div class="downloads"><a href="#">Download</a></div>
+          <a href="#">Download</a>
           <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
         </div>
       </div>
+      <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="media-left media-middle">
+          <i class="material-icons media-object">security</i>
+        </div>
+        <div class="media-body">
+          <h2>Sergeant-at-Arms</h2>
+          <a href="#">Download</a>
+          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+        </div>
+      </div>
+      -->
     </div>
 
     <div id="candidates">
@@ -184,8 +201,8 @@
         </div>
         <div class="media-body">
           <h2>Candidacy Application</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>All interested candidates for the 64th Annual CNH Circle K District Convention must complete a Candidacy Application and send to District Administrator Camille Goulet.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -194,8 +211,8 @@
         </div>
         <div class="media-body">
           <h2>Candidate Instructions</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>If you are a candidate seeking office for the 2018-2019 term and need assistance, please read these instructions.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -204,8 +221,8 @@
         </div>
         <div class="media-body">
           <h2>Caucus Rules 2018</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Check out the rules regarding caucusing before and during District Convention. All candidates are responsible for knowing this information.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -214,8 +231,8 @@
         </div>
         <div class="media-body">
           <h2>Code of Ethics 2018</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Campaigning is a tough process, and to help guide a safe and appropriate election, all candidates must comply with the Code of Ethics.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -224,8 +241,8 @@
         </div>
         <div class="media-body">
           <h2>Governor Agreement</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Candidates seeking office of the 2018-2019 CNH Circle K District Governor need to complete this service agreement.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -234,8 +251,8 @@
         </div>
         <div class="media-body">
           <h2>Secretary Agreement</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Candidates seeking office of the 2018-2019 CNH Circle K District Secretary need to complete this service agreement.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -244,8 +261,8 @@
         </div>
         <div class="media-body">
           <h2>Treasurer Agreement</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Candidates seeking office of the 2018-2019 CNH Circle K District Treasurer need to complete this service agreement.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -254,8 +271,8 @@
         </div>
         <div class="media-body">
           <h2>Lieutenant Governor Agreement</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Candidates seeking office of a 2018-2019 CNH Circle K Lieutenant Governor need to complete this service agreement.</p>
         </div>
       </div>
     </div>
@@ -267,8 +284,8 @@
         </div>
         <div class="media-body">
           <h2>House of Delegates Standing Rules</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Check out the standing rules of the 64th Annual House of Delegates at District Convention.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -277,8 +294,8 @@
         </div>
         <div class="media-body">
           <h2>Packing List</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>DCON is a long weekend with various themed days. Be sure to read the packing list so you don't leave anything behind!</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -287,8 +304,8 @@
         </div>
         <div class="media-body">
           <h2>Driving Directions</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>Need help getting to the LAX Marriott? No worries! Check out these step-by-step directions from either Northern or Southern California.</p>
         </div>
       </div>
       <div class="media document col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -297,8 +314,8 @@
         </div>
         <div class="media-body">
           <h2>Financing Guide</h2>
-          <div class="downloads"><a href="#">Download</a></div>
-          <p>Download the waiver for the 64th Annual CNH Circle K District Convention.</p>
+          <a href="#">Download</a>
+          <p>District Convention can be an expensive cost, but all worth it! Check out our financing guide to see how you can afford the largest event in Circle K International!</p>
         </div>
       </div>
     </div>
@@ -404,86 +421,91 @@
   </div>
 
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/km.jpg" alt="Kim Mai"/>
+      <img src="assets/img/km.jpg" alt="Kim Mai"/>
       <h4>Kim Mai Hoang</h4>
       <h5>DCON Chair</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="http://via.placeholder.com/200x200" alt="Andy Nguyen"/>
+      <img src="assets/img/andyn.jpg" alt="Shaira Santos"/>
       <h4>Andy Nguyen</h4>
       <h5>Executive Assistant</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/donald.jpg" alt="Donald Franks"/>
+      <img src="assets/img/donald.jpg" alt="Donald Franks"/>
       <h4>Donald Franks</h4>
       <h5>Audio / Visual</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/winnie.jpg" alt="Winnie Lam"/>
+      <img src="assets/img/winnie.jpg" alt="Winnie Lam"/>
       <h4>Winnie Lam</h4>
       <h5>Deco-venirs</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="http://via.placeholder.com/200x200" alt="Annika Liu"/>
+      <img src="assets/img/annika.jpg" alt="Annika Liu"/>
       <h4>Annika Liu</h4>
       <h5>Entertainment</h5>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="http://via.placeholder.com/200x200" alt="Nick Stringfellow"/>
+      <img src="assets/img/nick.jpg" alt="Shaira Santos"/>
       <h4>Nick Stringfellow</h4>
       <h5>Exposition</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/judy.jpg" alt="Judy Nguyen"/>
+      <img src="assets/img/judy.jpg" alt="Judy Nguyen"/>
       <h4>Judy Nguyen</h4>
       <h5>Graphics / Program</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/sienna.jpg" alt="Sienna Nguyen"/>
+      <img src="assets/img/sienna.jpg" alt="Sienna Nguyen"/>
       <h4>Sienna Nguyen</h4>
       <h5>Honors Reception</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="http://via.placeholder.com/200x200" alt="Andy Kim"/>
+      <img src="assets/img/andyk.jpg" alt="Shaira Santos"/>
       <h4>Andy Kim</h4>
       <h5>Media</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/jesus.jpg" alt="Jesus Martinez"/>
+      <img src="assets/img/jesus.jpg" alt="Jesus Martinez"/>
       <h4>Jesus Martinez</h4>
       <h5>Registration</h5>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/clifford.jpg" alt="Clifford Kaunang"/>
+      <img src="assets/img/clifford.jpg" alt="Clifford Kaunang"/>
       <h4>Clifford Kaunang</h4>
-      <h5>Sargeant-at-Arms</h5>
+      <h5>Sergeant-at-Arms</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/jessica.jpg" alt="Jessica Ango"/>
+      <img src="assets/img/jessica.jpg" alt="Jessica Ango"/>
       <h4>Jessica Ango</h4>
       <h5>Talent Show</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/christine.jpg" alt="Christine Dinh"/>
+      <img src="assets/img/christine.jpg" alt="Christine Dinh"/>
       <h4>Christine Dinh</h4>
       <h5>VIP Hostess</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="assets/img/shaira.jpg" alt="Shaira Santos"/>
+      <img src="assets/img/shaira.jpg" alt="Shaira Santos"/>
       <h4>Shaira Santos</h4>
       <h5>Workshops</h5>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <img class="committee" src="http://via.placeholder.com/200x200" alt="Tommy Thach"/>
+      <img src="assets/img/tommy.jpg" alt="Tommy Thach"/>
       <h4>Tommy Thach</h4>
       <h5>Workshops</h5>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+      <img src="assets/img/don.jpg" alt="Don Hull"/>
+      <h4>Don Hull</h4>
+      <h5>Advisor</h5>
     </div>
 
 </section>
 
-<section id="footer" class="container-fluid"></section>
+<footer class="container-fluid"></footer>
 
 </body>
 </html>

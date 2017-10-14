@@ -1,7 +1,7 @@
 $(function() {
 
 	var timelineBlocks = $('.cd-timeline-block'),
-		offset = 0.8;
+		  offset = 0.8;
 
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
@@ -33,32 +33,35 @@ $(function() {
 		countdown: true
 	});
 
-	$('nav ul li a[href^="#"]').on('click', function(e) {
+  // handle the navigation links
+  $('nav ul li a[href^="#"]').on('click', function(e) {
+    // prevent default anchor click behavior
+    e.preventDefault();
 
-	 // prevent default anchor click behavior
-	 e.preventDefault();
+	  // store hash
+	  var hash = this.hash;
 
-	 // store hash
-	 var hash = this.hash;
-
-	 // animate
-	 $('html, body').animate({
-			 scrollTop: $(hash).offset().top - 80
-		 }, 500, function(){
-
-			 // when done, add hash to url
-			 // (default click behaviour)
-			 window.location.hash = hash;
-		 });
-	  });
-
-    // toggle the documents
-    $('#filter span').click(function(){
-      var target = '#' + $(this).text().toLowerCase();
-      $('span.selected').removeClass('selected');
-      $(this).addClass('selected');
-      $('#filter ~ div[id]').not(target).fadeOut('fast');
-      $(target).delay(200).fadeIn('fast');
+	  // animate the scrolling
+	  $('html, body').animate({
+		    scrollTop: $(hash).offset().top - 80
+		}, 500, function(){
+		    window.location.hash = hash;
     });
+	});
+
+  // toggle the documents
+  $('#filter span').click(function(){
+    var target = '#' + $(this).text().toLowerCase();
+    $('span.selected').removeClass('selected');
+    $(this).addClass('selected');
+    $('#filter ~ div[id]').not(target).fadeOut('fast');
+    $(target).delay(200).fadeIn('fast');
+  });
+
+  // expand the document details for smaller screens
+  $('#documents h2').click(function(){
+    var target = $(this).next().nextAll();
+    if ($(window).width() < 769) target.slideToggle('fast');
+  });
 
 });
