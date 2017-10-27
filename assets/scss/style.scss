@@ -255,7 +255,14 @@ Documents
     text-align: left;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
-    a { cursor: pointer; }
+    a {
+      cursor: pointer;
+      &.coming-soon {
+        color: #333;
+        cursor: default;
+        &:hover { text-decoration: none; }
+      }
+    }
     h2 {
       display: inline-block;
       &:hover {
@@ -312,6 +319,9 @@ Timeline
       background: rgba(0, 0, 0, 0.1);
       border-top: 4px solid #06182E;
       border-radius: 3px;
+      &:not(:first-child) {
+        margin-top: 0;
+      }
       &:before {
         content: '';
         left: 50%;
@@ -348,6 +358,11 @@ Timeline
     height: 4px;
     width: 100%;
     background: #EEE;
+  }
+}
+@media (max-width: $sm) {
+  #timeline .timeline-container .entry:not(:first-child) {
+    margin-top: 15px;
   }
 }
 
@@ -408,7 +423,7 @@ DCON Committee
   }
   h5 {
     margin: 0;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
   }
 }
