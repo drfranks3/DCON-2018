@@ -44,9 +44,7 @@ $(function() {
 	  // animate the scrolling
 	  $('html, body').animate({
 		    scrollTop: $(hash).offset().top - 80
-		}, 500, function(){
-		    window.location.hash = hash;
-    });
+		}, 500);
 	});
 
   // toggle the documents
