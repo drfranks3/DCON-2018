@@ -89,10 +89,8 @@ nav.navbar-inverse {
       transform: scaleX(0);
       transition: transform 250ms ease-in-out;
     }
-    &:hover,
-    &:focus {
-      color: $nav !important;
-    }
+    &:hover { color: $nav !important; }
+    &:focus { color: #9d9d9d !important; }
   }
   &.active > a,
   &.active:hover > a,
@@ -106,6 +104,7 @@ nav.navbar-inverse {
       transform: translate(0px, -3px);
     }
   }
+  &:first-child { display: none; }
 }
 .navbar-brand {
   float: right;
@@ -312,6 +311,7 @@ Timeline
       position: relative;
       display: inline-block;
       max-width: 300px;
+      min-height: 205px;
       padding: 10px;
       font-size: 12px;
       text-align: left;
@@ -365,6 +365,11 @@ Timeline
     margin-top: 15px;
   }
 }
+@media (max-width: $md) {
+  #timeline .timeline-container .entry:nth-child(3n) {
+    margin-top: 15px;
+  }
+}
 
 /* --------------------------------
 Frequently Asked Questions
@@ -396,6 +401,10 @@ Frequently Asked Questions
       line-height: 20px;
       font-size: 15px;
       text-align: left;
+      a {
+        color: #FFF;
+        text-decoration: underline;
+      }
     }
   }
 }
