@@ -89,7 +89,10 @@ nav.navbar-inverse {
       transform: scaleX(0);
       transition: transform 250ms ease-in-out;
     }
-    &:hover { color: $nav !important; }
+    &:hover {
+      color: $nav !important;
+      transform: translate(0px, -3px);
+    }
     &:focus { color: #9d9d9d !important; }
   }
   &.active > a,
@@ -97,13 +100,7 @@ nav.navbar-inverse {
   &:hover > a {
     color: $nav !important;
   }
-  &.active {
-    a:after { transform: scaleX(1); }
-    &:hover > a {
-      color: $nav;
-      transform: translate(0px, -3px);
-    }
-  }
+  &.active a:after { transform: scaleX(1); }
   &:first-child { display: none; }
 }
 .navbar-brand {
@@ -436,11 +433,17 @@ DCON Committee
     font-size: 11px;
     font-weight: 300;
   }
+  h6 {
+    margin: 0;
+    font-size: 8px;
+    a { color: #FFF; }
+  }
 }
 @media (min-width: $lg) {
     #dcon-committee {
       h4 { font-size: 18px; }
       h5 { font-size: 15px; }
+      h6 { font-size: 12px; }
     }
     #dcon-committee {
       img {
