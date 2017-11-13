@@ -407,6 +407,16 @@ Frequently Asked Questions
 }
 
 /* --------------------------------
+DCON Committee Whole
+-------------------------------- */
+#dcon-committee-whole {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 0;
+}
+
+/* --------------------------------
 DCON Committee
 -------------------------------- */
 #dcon-committee {
@@ -416,7 +426,7 @@ DCON Committee
     color: #FFF;
     text-transform: uppercase;
     &:first-child { margin-top: 50px; }
-    h1 { font: 8rem 'Geared'; }
+    h1 { font: 7.5rem 'Geared'; }
   }
   img {
     margin-top: 30px;
@@ -436,21 +446,32 @@ DCON Committee
   h6 {
     margin: 0;
     font-size: 8px;
-    a { color: #FFF; }
+    a {
+      color: #FFF;
+      span { display: none; }
+    }
+  }
+}
+@media (min-width: $sm) {
+  #dcon-committee {
+    h6 a span {
+      display: initial;
+    }
   }
 }
 @media (min-width: $lg) {
-    #dcon-committee {
-      h4 { font-size: 18px; }
-      h5 { font-size: 15px; }
-      h6 { font-size: 12px; }
+  #dcon-committee {
+    div > h1 { font-size: 8rem; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 15px; }
+    h6 { font-size: 12px; }
+  }
+  #dcon-committee {
+    img {
+      height: 150px;
+      width: 150px;
     }
-    #dcon-committee {
-      img {
-        height: 150px;
-        width: 150px;
-      }
-    }
+  }
 }
 
 /* --------------------------------
