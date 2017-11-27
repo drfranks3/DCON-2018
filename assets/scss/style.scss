@@ -357,6 +357,11 @@ Timeline
         overflow-wrap: break-word;
         text-align: center;
         text-transform: uppercase;
+        span {
+          vertical-align: middle;
+          color: red;
+          font-size: 12px;
+        }
       }
       h2 {
         margin-bottom: 10px;
