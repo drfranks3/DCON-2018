@@ -214,19 +214,29 @@ Welcome
     &, & p { text-align: left; }
   }
   #chair-message { padding-left: 20px; }
-  .dcon-video {
+  .entry > div {
     margin: 10px auto;
     text-align: center;
-    iframe {
-      height: 315px;
-      width: 560px;
-    }
+  }
+  .dcon-img img {
+    height: 350px;
+    width: 350px;
+  }
+  .dcon-video iframe {
+    height: 315px;
+    width: 560px;
   }
 }
 @media (max-width: $sm) {
-  #welcome .dcon-video iframe {
-    height: 169px;
-    width: 300px;
+  #welcome {
+    .dcon-img img {
+      height: 250px;
+      width: 250px;
+    }
+    .dcon-video iframe {
+      height: 169px;
+      width: 300px;
+    }
   }
 }
 
@@ -285,7 +295,7 @@ Documents
       font-size: 1.3rem;
       font-weight: bold;
       text-transform: uppercase;
-      vertical-align: middle;
+      vertical-align: text-top;
     }
     p { line-height: 1.5; }
     p, ul, h4 { display: none; }
