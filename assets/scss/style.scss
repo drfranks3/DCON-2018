@@ -21,10 +21,6 @@ Primary
 @font-face { font-family: 'Ferro'; src: url(/assets/fonts/ferrorosso.ttf) format('truetype'); }
 @font-face { font-family: 'Geared'; src: url(/assets/fonts/geared.ttf) format('truetype'); }
 @font-face { font-family: 'HandShop'; src: url(/assets/fonts/handshop.ttf) format('truetype'); }
-html * {
-  -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-}
 *,
 *:after,
 *:before {
@@ -43,7 +39,7 @@ div { font-size: 15px; }
 h2 {
   padding-top: 20px;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 p {
