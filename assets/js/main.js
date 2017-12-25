@@ -47,6 +47,8 @@ $(function() {
 		}, 500);
 	});
 
+	filters = [];
+
   // toggle the documents
   $('#filter span').click(function(){
     var target = '#' + $(this).text().toLowerCase();
@@ -54,7 +56,9 @@ $(function() {
     $(this).addClass('selected');
     $('#filter ~ div[id]').not(target).fadeOut('fast');
     $(target).delay(200).fadeIn('fast');
-  });
+  }).each(function(){
+		filters.push('#' + $(this).text().toLowerCase());
+	});
 
   // expand the document details for smaller screens
   $('#documents h2').click(function(){
@@ -63,3 +67,18 @@ $(function() {
   });
 
 });
+
+window.onload = function(){
+
+	var hash = location.hash;
+
+	if (filters.includes(hash))
+	{
+		$('html, body').animate({
+			scrollTop: $('#documents').offset().top - 80
+		}, 500);
+		var count = filters.findIndex(x => x == hash);
+		$('#filter span').eq(count).trigger('click');
+	}
+
+};
