@@ -66,19 +66,19 @@ $(function() {
     if ($(window).width() < 769) target.slideToggle('fast');
   });
 
+	$(window).on('hashchange', function(){
+    change();
+	}).on('load', function(){
+		if (filters.includes(location.hash)) change();
+	});
+
 });
 
-window.onload = function(){
-
-	var hash = location.hash;
-
-	if (filters.includes(hash))
-	{
-		$('html, body').animate({
-			scrollTop: $('#documents').offset().top - 80
-		}, 500);
-		var count = filters.findIndex(x => x == hash);
-		$('#filter span').eq(count).trigger('click');
-	}
-
-};
+function change() {
+	$('html, body').animate({
+		scrollTop: $('#documents').offset().top - 80
+	}, 500);
+	var hash  = location.hash,
+			count = filters.findIndex(x => x == hash);
+	$('#filter span').eq(count).trigger('click');
+}
