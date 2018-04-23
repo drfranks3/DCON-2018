@@ -28,6 +28,7 @@ $(function() {
 	var date = new Date(2018, 2, 23, 16);
 	var now = new Date();
 	var diff = (date.getTime()/1000) - (now.getTime()/1000);
+	if (diff < 0) diff = 0;
 	var clock = $('.countdown').FlipClock(diff, {
 		clockFace: 'DailyCounter',
 		countdown: true
